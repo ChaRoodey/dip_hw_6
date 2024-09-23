@@ -1,11 +1,8 @@
 def counter(s: str) -> {str: int}:
     rez = {}
 
-    for word in s.split(' '):
-        if word in rez:
-            rez[word] += 1
-        else:
-            rez[word] = 1
+    for word in s:
+        rez[word] = rez.get(word, 0) + 1
 
     return rez
 
